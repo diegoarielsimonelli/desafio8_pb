@@ -5,16 +5,16 @@ const productosRouter = express.Router();
 const Contenedor = require('../class');
 const productosContenedor = new Contenedor('/data/productos.json')
 
-productosRouter.get('/',  (req, res) =>{
-    const lista =  productosContenedor.getAll()
+productosRouter.get('/', async (req, res) =>{
+    const lista = await productosContenedor.getAll()
     res.send({
         data: lista
     })
 })
 
-productosRouter.get('/:id',  (req, res) =>{
+productosRouter.get('/:id', async (req, res) =>{
     idProducto = Number(req.params.id)
-    const productoSeleccionado =  productosContenedor.getById(idProducto)
+    const productoSeleccionado = await productosContenedor.getById(idProducto)
     if (!productoSeleccionado){
         res.send({ error : 'producto no encontrado' })
     }else{
@@ -24,9 +24,9 @@ productosRouter.get('/:id',  (req, res) =>{
     }
 })
 
-productosRouter.post('/',  (req, res) =>{
+productosRouter.post('/', async (req, res) =>{
     const newProducto = req.body; 
-    const idProductoNuevo =  productosContenedor.save(newProducto);
+    const idProductoNuevo = await productosContenedor.save(newProducto);
     res.send({
         message : 'success',
         data: {
@@ -36,9 +36,9 @@ productosRouter.post('/',  (req, res) =>{
 })
 })
 
-productosRouter.put('/:id',  (req, res) =>{
+productosRouter.put('/:id', async (req, res) =>{
     const datosNuevos = req.body
-    const productoUpdate =  productosContenedor.update(req.params.id,datosNuevos)
+    const productoUpdate = await productosContenedor.update(req.params.id,datosNuevos)
 
     if (!productoUpdate){
         res.send({
@@ -55,13 +55,13 @@ productosRouter.put('/:id',  (req, res) =>{
 })
 
 
-productosRouter.delete('/:id',  (req, res) =>{
+productosRouter.delete('/:id', async (req, res) =>{
     idProducto = Number(req.params.id)
-    const productoAEliminiar =  productosContenedor.getById(idProducto)
+    const productoAEliminiar = await productosContenedor.getById(idProducto)
     if (productoAEliminiar === null ){
         res.send({ error : 'Producto no Encontrado' })
     }else {
-         productosContenedor.deleteById(idProducto);
+        await productosContenedor.deleteById(idProducto);
         res.send({ message : 'Producto Eliminado de Forma Correcta' })
     }
 })
