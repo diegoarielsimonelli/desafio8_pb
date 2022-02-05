@@ -2,27 +2,38 @@
   {
     "id": 1,
     "name": "Vasos",
-    "thumbnail": "vasos.jpg"
+    "thumbnail": "vasos.jpg",
+    "price": "10.00"
   },
   {
     "id": 2,
     "name": "Platos",
-    "thumbnail": "platos.jpg"
+    "thumbnail": "platos.jpg",
+    "price": "20.00"
   },
   {
     "id": 3,
     "name": "Tenedor",
-    "thumbnail": "tenedor.jpg"
+    "thumbnail": "tenedor.jpg",
+    "price": "5.00"
   },
   {
     "id": 4,
     "name": "Cuchillo",
-    "thumbnail": "cuchillo.jpg"
+    "thumbnail": "cuchillo.jpg",
+    "price": "5.00"
   },
   {
-    "id": 5
+    "id": 5,
+    "name": "Cuchillo 2",
+    "thumbnail": "cuchillo.jpg",
+    "price": "10.00"
+
   },
   {
-    "id": 6
+    "id": 6,
+    "name": "Tenedor 2",
+    "thumbnail": "tenedor.jpg",
+    "price": "15.00"
   }
 ]
