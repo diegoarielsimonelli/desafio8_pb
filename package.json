@@ -1,0 +1,22 @@
+{
+  "name": "desafio8_pb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cookies-parser": "^1.2.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4"
+  }
+}

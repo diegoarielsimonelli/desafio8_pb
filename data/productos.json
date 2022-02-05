@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Vasos",
+    "thumbnail": "vasos.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Platos",
+    "thumbnail": "platos.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tenedor",
+    "thumbnail": "tenedor.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Cuchillo",
+    "thumbnail": "cuchillo.jpg"
+  },
+  {
+    "id": 5
+  },
+  {
+    "id": 6
+  }
+]
