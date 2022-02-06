@@ -2,8 +2,10 @@ const express = require('express');
 
 const productosRouter = express.Router();
 
+
 const Contenedor = require('../class');
 const productosContenedor = new Contenedor('/data/productos.json')
+productosRouter.use(express.json());
 
 productosRouter.get('/', async (req, res) =>{
     const lista = await productosContenedor.getAll()
